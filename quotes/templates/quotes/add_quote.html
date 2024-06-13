@@ -1,0 +1,23 @@
+<!-- quotes/templates/quotes/add_quote.html -->
+
+{% extends "quotes/base_generic.html" %}
+
+{% block content %}
+  <h2>Добавить новую цитату</h2>
+  <form method="post">
+    {% csrf_token %}
+    <div>
+      <label for="id_quote">Цитата:</label>
+      {{ form.quote }}
+    </div>
+    <div>
+      <label for="id_tags">Теги:</label>
+      {{ form.tags }}
+    </div>
+    <div>
+      <label for="id_author">Автор:</label>
+      {{ form.author }}
+    </div>
+    <button type="submit">Сохранить</button>
+  </form>
+{% endblock %}

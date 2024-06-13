@@ -1,0 +1,16 @@
+{% extends "quotes/base_generic.html" %}
+
+{% block content %}
+  <h2>Register</h2>
+  <div class="login">
+
+  <form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <div class="inpout group mb-3">
+
+      <input class="btn btn-primary" type="submit" name="submit" value="Register"/>
+    </div>
+  </form>
+  </div>
+{% endblock content %}
